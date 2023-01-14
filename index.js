@@ -11,7 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Set static folder
-app.use(express.static(path.join(__dirname, '../ai-image-gen-frontend')))
+// app.use(express.static(path.join(__dirname, '../ai-image-gen-frontend')))
+app.use(express.static(path.join(__dirname, './frontend')))
 
 app.use('/openai', require('./routes/openaiRoute'));
 
